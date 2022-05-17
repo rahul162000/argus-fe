@@ -1,0 +1,15 @@
+<svg id="Component_10_1" data-name="Component 10 – 1" xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ba0913;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_523" data-name="Rectangle 523" class="cls-1" width="57" height="57" rx="10"/>
+  <path id="Polygon_2" data-name="Polygon 2" class="cls-2" d="M12,0,24,20H0Z" transform="translate(17 19)"/>
+</svg>

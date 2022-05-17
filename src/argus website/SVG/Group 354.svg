@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="117" height="21.17" viewBox="0 0 117 21.17">
+  <g id="Group_354" data-name="Group 354" transform="translate(-52 -208.999)">
+    <g id="Group_353" data-name="Group 353" transform="translate(0 -0.461)">
+      <path id="Path_460" data-name="Path 460" d="M23.385,21.167H1.839A1.769,1.769,0,0,0,0,22.851v2.406A1.769,1.769,0,0,0,1.839,26.94H23.385a1.769,1.769,0,0,0,1.839-1.684V22.851A1.769,1.769,0,0,0,23.385,21.167Z" transform="translate(52 188.293)" fill="#ba0812"/>
+      <path id="Path_461" data-name="Path 461" d="M.788,202.526H7.62a.724.724,0,1,0,0-1.443H.788a.724.724,0,1,0,0,1.443Z" transform="translate(52 16.557)" fill="#ba0812"/>
+      <path id="Path_462" data-name="Path 462" d="M.788,266.026H7.62a.724.724,0,1,0,0-1.443H.788a.724.724,0,1,0,0,1.443Z" transform="translate(52 -44.057)" fill="#ba0812"/>
+      <path id="Path_463" data-name="Path 463" d="M.788,329.526H7.62a.724.724,0,1,0,0-1.443H.788a.724.724,0,1,0,0,1.443Z" transform="translate(52 -104.67)" fill="#ba0812"/>
+      <path id="Path_464" data-name="Path 464" d="M.788,393.026H7.62a.724.724,0,1,0,0-1.443H.788a.724.724,0,1,0,0,1.443Z" transform="translate(52 -165.283)" fill="#ba0812"/>
+      <path id="Path_465" data-name="Path 465" d="M.788,456.526H7.62a.724.724,0,1,0,0-1.443H.788a.724.724,0,1,0,0,1.443Z" transform="translate(52 -225.896)" fill="#ba0812"/>
+      <path id="Path_466" data-name="Path 466" d="M224.541,201.083H213.505a1.775,1.775,0,0,0-1.839,1.684v9.622a1.775,1.775,0,0,0,1.839,1.684h11.036a1.775,1.775,0,0,0,1.839-1.684v-9.622A1.775,1.775,0,0,0,224.541,201.083Zm-5.518,3.368a1.449,1.449,0,1,1-1.577,1.443A1.512,1.512,0,0,1,219.023,204.451Zm3.153,6.014a.763.763,0,0,1-.788.722h-4.73a.763.763,0,0,1-.788-.722v-.356a2.037,2.037,0,0,1,2.207-1.809h1.892a2.037,2.037,0,0,1,2.207,1.809Z" transform="translate(-149.156 16.557)" fill="#ba0812"/>
+    </g>
+    <text id="Dashboard" transform="translate(100 225)" fill="#ba0812" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">Dashboard</tspan></text>
+  </g>
+</svg>

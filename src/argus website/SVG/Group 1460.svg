@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1019" height="44" viewBox="0 0 1019 44">
+  <g id="Group_1460" data-name="Group 1460" transform="translate(-363 -376)">
+    <g id="Group_1453" data-name="Group 1453" transform="translate(363 376)">
+      <rect id="Rectangle_553" data-name="Rectangle 553" width="434" height="44" rx="10" fill="#e8eaee"/>
+      <text id="Module" transform="translate(218 28)" fill="#707070" font-size="15" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-26.246" y="0">Module</tspan></text>
+    </g>
+    <g id="Group_1456" data-name="Group 1456" transform="translate(800.27 376)">
+      <rect id="Rectangle_553-2" data-name="Rectangle 553" width="143" height="44" rx="10" transform="translate(-0.27)" fill="#e8eaee"/>
+      <text id="Required" transform="translate(68.73 28)" fill="#707070" font-size="15" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-32.505" y="0">Required</tspan></text>
+    </g>
+    <g id="Group_1457" data-name="Group 1457" transform="translate(946.36 376)">
+      <rect id="Rectangle_553-3" data-name="Rectangle 553" width="144" height="44" rx="10" transform="translate(-0.36)" fill="#e8eaee"/>
+      <text id="Completed" transform="translate(67.64 28)" fill="#707070" font-size="15" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-38.752" y="0">Completed</tspan></text>
+    </g>
+    <g id="Group_1458" data-name="Group 1458" transform="translate(1093.45 376)">
+      <rect id="Rectangle_553-4" data-name="Rectangle 553" width="144" height="44" rx="10" transform="translate(-0.45)" fill="#e8eaee"/>
+      <text id="Quiz" transform="translate(68.55 28)" fill="#707070" font-size="15" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-16.249" y="0">Quiz</tspan></text>
+    </g>
+    <g id="Group_1459" data-name="Group 1459" transform="translate(1239.628 376)">
+      <rect id="Rectangle_553-5" data-name="Rectangle 553" width="142" height="44" rx="10" transform="translate(0.372)" fill="#e8eaee"/>
+      <text id="Status" transform="translate(68.372 28)" fill="#707070" font-size="15" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-22.921" y="0">Status</tspan></text>
+    </g>
+  </g>
+</svg>

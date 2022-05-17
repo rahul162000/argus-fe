@@ -1,0 +1,154 @@
+.student-calender {
+  height: 87vh;
+  background-color: white;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: #868696;
+}
+
+.rbc-today {
+  background-color: rgba(186, 9, 19, 0);
+}
+
+.rbc-btn-group > button {
+  background-color: lightgray;
+  box-shadow: none !important;
+  border-radius: 10px;
+  outline-width: none;
+  border: 0px;
+  margin: 5px;
+  text-transform: uppercase !important;
+  font-size: 13px;
+  color: #868696;
+  font-weight: bold;
+}
+
+.rbc-btn-group > button:hover {
+  background-color: rgba(186, 9, 19, 0.9);
+  color: white;
+}
+
+.rbc-active {
+  background-color: lightgray !important;
+  box-shadow: none !important;
+}
+
+.rbc-active:hover {
+  background-color: rgba(186, 9, 19, 0.9) !important;
+  color: white !important;
+}
+
+.rbc-allday-cell {
+  height: auto !important;
+}
+
+.rbc-toolbar-label {
+  font-size: 25px;
+  font-weight: 600;
+  color: gray;
+  text-transform: uppercase;
+}
+.rbc-toolbar {
+  flex-wrap: nowrap;
+}
+
+.rbc-btn-group:first-child {
+  padding-right: 30px;
+}
+
+.rbc-btn-group:last-child button:nth-child(2) {
+  display: none;
+}
+
+/* .rbc-btn-group:last-child button:nth-child() {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+} */
+
+.rbc-off-range-bg {
+  background-color: lightgray;
+}
+.rbc-event {
+  background-color: rgba(186, 9, 19, 0.9);
+  color: white;
+  margin: 2px;
+  width: auto;
+}
+
+.rbc-selected {
+  background-color: rgba(186, 9, 19, 1) !important;
+  border: none;
+}
+
+.rbc-month-row {
+  border-top: 0px !important;
+}
+.rbc-day-bg {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 2px;
+}
+.rbc-date-cell {
+  padding: 5px;
+  padding-right: 10px;
+}
+
+.rbc-month-view {
+  border: none;
+}
+.rbc-header {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 2px;
+  background-color: lightgray;
+  color: gray;
+  padding: 5px;
+}
+
+.rbc-row-segment > .rbc-event {
+  height: 200%;
+}
+
+@media screen and (max-width: 1150px) {
+  .rbc-toolbar {
+    transform: scale(0.9) !important;
+  }
+  .rbc-toolbar-label {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .rbc-btn-group {
+    transform: scale(0.8) !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .rbc-btn-group:first-child {
+    padding-right: 0px;
+  }
+
+  .rbc-btn-group {
+    transform: scale(0.9) !important;
+  }
+
+  .rbc-toolbar {
+    transform: scale(0.8) !important;
+    flex-direction: column;
+  }
+  .student-calender {
+    height: 85vh;
+    background-color: white;
+    font-size: 10px;
+  }
+  .rbc-row-segment > .rbc-event {
+    height: 150%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .rbc-row-segment > .rbc-event {
+    height: 100%;
+  }
+}

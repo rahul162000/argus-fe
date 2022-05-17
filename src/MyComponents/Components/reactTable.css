@@ -1,0 +1,65 @@
+table {
+  border-spacing: 0;
+  width: 100%;
+  background-color: white;
+}
+
+table > thead > tr > th > div > span > input {
+}
+
+table > th,
+td > div {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  padding: 20px;
+  color: rgba(134, 134, 150);
+  border: 2px solid rgba(232, 234, 238);
+  border-radius: 10px !important;
+  text-align: center;
+  font-size: 1.125rem;
+}
+th > div {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.125rem;
+  padding: 20px;
+  background-color: rgba(232, 234, 238) !important;
+  color: rgba(134, 134, 150) !important;
+}
+
+table > th,
+td:last-child {
+  border-right: 0;
+  color: rgba(134, 134, 150) !important;
+}
+
+table > tr:last-child > td {
+  border-bottom: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+.MuiPagination-ul > li:first-child > button {
+  background-color: #ba0913;
+  border-radius: 5px;
+  color: white;
+}
+
+.MuiPagination-ul > li:last-child > button {
+  background-color: #ba0913;
+  border-radius: 5px;
+  color: white;
+}

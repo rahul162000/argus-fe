@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="34" viewBox="0 0 34 34">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="fi-rr-sign-out_1_Background_Mask_" data-name="fi-rr-sign-out 1 (Background/Mask)" width="34" height="34" transform="translate(-5.188 -5.188)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="fi-rr-sign-out_1" data-name="fi-rr-sign-out 1" transform="translate(5.188 28.812) rotate(-90)" clip-path="url(#clip-path)">
+    <path id="Vector" d="M4.915,21.624a2.949,2.949,0,0,1-2.949-2.949V4.915A2.949,2.949,0,0,1,4.915,1.966H6.88A.983.983,0,0,0,6.88,0H4.915A4.921,4.921,0,0,0,0,4.915V18.676A4.921,4.921,0,0,0,4.915,23.59H6.88a.983.983,0,0,0,0-1.966Z" transform="translate(0.016 0.016)" fill="#fefefe"/>
+    <path id="Vector-2" data-name="Vector" d="M17.815,8.953a2.956,2.956,0,0,0,0-4.17L13.307.276a.983.983,0,0,0-1.39,1.39l4.219,4.22H.983a.983.983,0,0,0,0,1.966H16.137l-4.22,4.22a.983.983,0,1,0,1.39,1.39h0Z" transform="translate(23.607 18.704) rotate(180)" fill="#fefefe"/>
+    <rect id="fi-rr-sign-out_1_Background_Mask_2" data-name="fi-rr-sign-out 1 (Background/Mask)" width="34" height="34" transform="translate(-5.188 -5.188)" fill="none"/>
+  </g>
+</svg>
