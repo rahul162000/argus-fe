@@ -131,7 +131,7 @@ export default function SideNav(props) {
             <span className="hidden md:block">Website</span>
           </Link>
           <Link
-            to="/dashboard/student/history"
+            to="/dashboard/admin/reports"
             className={`flex items-center pl-2 py-3 pr-4  text-white hover:bg-white hover:text-red-1 rounded-lg border-b-2 border-opacity-50 shadow-button-inner-1 ${
               active === 9
                 ? "bg-white text-red-1 shadow-none"

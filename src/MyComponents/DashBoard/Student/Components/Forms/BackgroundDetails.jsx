@@ -26,7 +26,7 @@ const BackgroundDetails = ({ user }) => {
     if (!values.levelOfEducation) {
       errors.levelOfEducation = "*Required";
     }
-    if (!values?.languagesKnown?.[0]) {
+    if (!values?.languagesKnown?.length) {
       errors.languagesKnown = "*Required";
     }
 
@@ -34,18 +34,18 @@ const BackgroundDetails = ({ user }) => {
   };
 
   const [selectedLanguages, setSelectedLanguages] = useState([]);
-  console.log(selectedLanguages);
+
   const { getFieldProps, handleSubmit, errors, values, setValues } = useFormik({
     initialValues: {
       hasCriminalRecord: "",
       hasVechicle: "",
       hasLicenseToDrive: "",
       levelOfEducation: "",
-      languagesKnown: selectedLanguages?.map((language) => language?.name),
+      languagesKnown: [],
     },
     validate,
     onSubmit: async (values, { resetForm }) => {
-      console.log("submitValuyes", values);
+      values.languagesKnown = selectedLanguages;
       dispatch(
         updateUser(
           resetForm,
@@ -58,20 +58,19 @@ const BackgroundDetails = ({ user }) => {
       resetForm();
     },
   });
-  // console.log(user)
+
   useEffect(() => {
+    setSelectedLanguages(user?.languagesKnown);
     setValues({
       hasCriminalRecord: user?.hasCriminalRecord,
       hasVechicle: user?.hasVechicle,
       hasLicenseToDrive: user?.hasLicenseToDrive,
       levelOfEducation: user?.levelOfEducation,
-      languagesKnown: selectedLanguages,
+      languagesKnown: user?.languagesKnown,
     });
-    setSelectedLanguages(user?.languagesKnown);
-  }, [user, setValues]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user]);
 
-  console.log({ values });
-  console.log("user", user);
   return (
     <div className="w-full lg:w-1/2 mx-auto">
       <form
@@ -172,10 +171,12 @@ const BackgroundDetails = ({ user }) => {
             </label>
             <Multiselect
               options={languages} // Options to display in the dropdown
-              selectedValues={values?.languagesKnown?.name}
+              selectedValues={selectedLanguages}
               onSelect={(language) => setSelectedLanguages(language)}
               onRemove={(language) => setSelectedLanguages(language)}
               displayValue="name" // Property name to display in the dropdown options
+              key="id" // Property key to identify unique names
+              {...getFieldProps("languagesKnown")}
             />
             {errors?.languagesKnown ? (
               <div className="w-full text-xs text-red-400">
@@ -186,8 +187,7 @@ const BackgroundDetails = ({ user }) => {
         </div>
         <div className="flex shadow-forms-1 z-20 rounded-b-2xl">
           <button
-            //type="submit"
-            onClick={() => console.log({ values })}
+            type="submit"
             className=" mx-auto my-4 w-1/2 text-lg lg:text-2xl p-2 text-white font-bold hover:bg-white border-4 bg-red-1 border-red-1 border-double hover:text-red-1 rounded-lg hover:shadow-button-inner"
           >
             UPDATE
