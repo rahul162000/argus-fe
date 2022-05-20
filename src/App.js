@@ -1,6 +1,7 @@
 import "./App.css";
 import "./MyComponents/Components/FontAwesomeIcons";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import AdminRoute from "./MyComponents/DashBoard/Admin/Components/AdminRoutes";
 import StudentRoutes from "./MyComponents/DashBoard/Student/Components/StudentRoutes";
 
@@ -39,7 +40,7 @@ import Mypurchases from "./MyComponents/DashBoard/Student/MyPurchases";
 import LoginForAdmin from "./MyComponents/DashBoard/Admin/AdminControl/LoginForAdmin";
 import AdminHome from "./MyComponents/DashBoard/Admin/Home";
 import AdminHomeControls from "./MyComponents/DashBoard/Admin/HomePageControls";
-import AdminStatistics from "./MyComponents/DashBoard/Admin/Statistics";
+import AdminReports from "./MyComponents/DashBoard/Admin/Reports";
 import AdminCourseControl from "./MyComponents/DashBoard/Admin/CourseControl";
 import AdminContactControl from "./MyComponents/DashBoard/Admin/ContactFormMessages";
 import AdminLmsHome from "./MyComponents/DashBoard/Admin/LmsHome";
@@ -97,6 +98,7 @@ function App() {
     <Router>
       <div className="App">
         <ScrollToTop />
+        <ToastContainer />
         <switch>
           <HomeRoute path="/" exact component={Home} />
           <HomeRoute path="/about" exact component={About} />
@@ -210,8 +212,8 @@ function App() {
             component={AdminPasswordChange}
           />
           <AdminRoute
-            path="/dashboard/admin/statistics"
-            component={AdminStatistics}
+            path="/dashboard/admin/reports"
+            component={AdminReports}
           />
           <AdminRoute
             path="/dashboard/admin/coursecontrol"
