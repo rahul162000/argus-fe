@@ -25,13 +25,13 @@ import PauseRoundedIcon from "@mui/icons-material/PauseRounded";
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-    <div>
+    <div className="fixed bottom-1/2 right-5 bg-white rounded-full flex items-center justify-center">
       <IconButton
         onClick={() => {
           window.speechSynthesis.cancel();
           onClick();
         }}
-        style={{marginLeft:"auto"}}
+        style={{ marginLeft: "auto" }}
       >
         <NavigateNextRoundedIcon color="black" style={{ fontSize: "60px" }} />
       </IconButton>
@@ -41,19 +41,13 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <div
-      className="slick-arrow"
-      style={{
-        color: "black",
-        left: "-60px",
-      }}
-    >
+    <div className="fixed bottom-1/2 left-5 bg-white rounded-full flex items-center justify-center">
       <IconButton
         onClick={() => {
           window.speechSynthesis.cancel();
           onClick();
         }}
-        style={{marginRight:"auto"}}
+        style={{ marginRight: "auto" }}
       >
         <NavigateBeforeRoundedIcon color="black" style={{ fontSize: "60px" }} />
       </IconButton>
@@ -289,13 +283,13 @@ const ChapterContent = ({ show, setShow, currentChapter, chapter, index }) => {
                       <div className="flex flex-col lg:flex-row items-center">
                         <div className="lg:w-1/2 h-full flex items-center justify-center mb-2.5">
                           <img
-                            className="w-32 lg:w-full"
+                            className="h-1/2 lg:w-full"
                             src={`${API}/material/getSlideImg/${courseId}/${currentChapter?._id}/${data?._id}`}
                             alt=""
                           />
                         </div>
-                        <div className="lg:w-1/2 h-60 lg:h-96 overflow-y-scroll lg:pl-4">
-                          <h1>{data?.title}</h1>
+                        <div className="h-full overflow-y-scroll lg:pl-4">
+                          <h1 className="text-2xl font-bold mb-3">{data?.title}</h1>
                           <p className="whitespace-pre-line">{data?.text}</p>
                         </div>
                       </div>
