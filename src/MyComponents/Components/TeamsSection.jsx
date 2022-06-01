@@ -85,8 +85,8 @@ const Teams = () => {
         breakpoint: 468,
         settings: {
           arrows: false,
-          slidesToShow: 1,
-          centerPadding: "-2675px",
+          slidesToShow: 3,
+          centerPadding: "5px",
         },
       },
     ],
@@ -119,7 +119,7 @@ const Teams = () => {
               </h1>
             </div>
 
-            <div className="w-full h-full xl:w-3/5 ">
+            <div className="w-full h-80 md:h-full xl:w-3/5 ">
               <Slider
                 asNavFor={nav.nav1}
                 ref={(slider) => (slider2 = slider)}
@@ -131,7 +131,7 @@ const Teams = () => {
                     <img
                       src={`${API}/team/get-photo/${teammember._id}`}
                       alt=""
-                      className="max-h-44 mx-auto object-contain object-bottom pt-6 teamSlider"
+                      className="w-full h-36 md:max-h-44 mx-auto md:object-bottom pt-6 teamSlider"
                     />
                   );
                 })}

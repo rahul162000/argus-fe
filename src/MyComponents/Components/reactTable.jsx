@@ -200,7 +200,7 @@ function Table({
           setGlobalFilter={setGlobalFilter}
         /> */}
       </div>
-      <div className="overflow-x-scroll lg:overflow-visible">
+      <div className="overflow-x-scroll xl:overflow-visible">
         <table {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (

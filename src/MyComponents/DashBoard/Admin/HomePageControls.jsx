@@ -33,10 +33,10 @@ export default function Home() {
 
   return (
     <div className="w-full flex flew-col md:flex-row bg-client">
-      <div className="w-36 md:w-56 lg:w-60 xl:w-64 bg-red-1">
+      <div className="w-16 md:w-56 lg:w-60 xl:w-64 bg-red-1">
         <SideNav active={8} />
       </div>
-      <div className="w-9/12 sm:w-10/12">
+      <div className="w-9/12 sm:w-10/12 mx-auto">
         <ProfileBar />
         <div className="flex flex-col md:flex-row items-center justify-between mx-auto max-w-1500">
           <button

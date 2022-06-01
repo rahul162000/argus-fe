@@ -31,12 +31,12 @@ export default function ContactFormMessage() {
 
   return (
     <div className="w-full flex flew-col md:flex-row bg-client">
-      <div className="w-36 md:w-56 lg:w-60 xl:w-64 bg-red-1">
+      <div className="w-16 md:w-56 lg:w-60 xl:w-64 bg-red-1">
         <SideNav />
       </div>
-      <div className="w-9/12 sm:w-10/12">
+      <div className="w-10/12 sm:w-10/12 mx-auto">
         <ProfileBar />
-        <div className="bg-white px-4 pb-10 shadow-button-shadow-2 max-w-1366 mx-3 2xl:mx-auto mt-36 md:mt-0 mb-10 md:my-16 rounded-2xl">
+        <div className="bg-white px-4 pb-10 shadow-button-shadow-2 max-w-1366 mx-3 2xl:mx-auto my-8 rounded-2xl">
           <h1 className="text-3xl text-center mb-8 leading-tight title-font font-bold text-white w-56 sm:w-96 mx-auto bg-red-1 rounded-b-xl px-3 pt-4 pb-5">
             MESSAGES
           </h1>
@@ -65,7 +65,7 @@ export default function ContactFormMessage() {
             </div>
             {messages.slice((page - 1) * 5, page * 5).map((b, index) => {
               return (
-                <div className="hidden lg:flex flex-row text-base xl:text-lg items-stretch mb-2">
+                <div className="flex flex-col lg:flex-row text-base xl:text-lg items-stretch mb-6 lg:mb-2 border-2 lg:border-0 rounded-xl">
                   <h1 className="flex flex-col justify-center text-center lg:w-3/12 px-3 py-3 text-gray-2 rounded-xl border-2 mx-1 my-1 lg:my-0 text-lg lg:text-sm xl:text-lg">
                     {b?.name}
                   </h1>

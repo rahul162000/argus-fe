@@ -105,13 +105,13 @@ const Applications = () => {
   console.log(applications);
 
   return (
-    <div className="w-full flex flew-col md:flex-row">
-      <div className="w-2/12 bg-red-1">
+    <div className="w-full flex flew-col md:flex-row bg-client">
+      <div className="w-16 md:w-56 lg:w-60 xl:w-64 bg-red-1">
         <SideNav active={4} />
       </div>
-      <div className="w-full">
+      <div className="w-9/12 sm:w-10/12 mx-auto">
         <ProfileBar />
-        <div className="bg-white shadow-button-shadow-2 max-w-1366 sm:mx-3 2xl:mx-auto mt-72 md:mt-0 mb-10 md:my-16 rounded-2xl">
+        <div className="bg-white shadow-button-shadow-2 max-w-1366 sm:mx-3 2xl:mx-auto my-8 rounded-2xl">
           <h1 className="text-3xl text-center mb-8 leading-tight title-font font-bold text-white w-56 sm:w-96 mx-auto bg-red-1 rounded-b-xl px-3 pt-4 pb-5">
             APPLICATIONS
           </h1>

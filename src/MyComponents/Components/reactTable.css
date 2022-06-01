@@ -63,3 +63,9 @@ table > tr:last-child > td {
   border-radius: 5px;
   color: white;
 }
+
+@media screen and (max-width: 1280px) {
+  td > div {
+    min-width: 250px;
+  }
+}

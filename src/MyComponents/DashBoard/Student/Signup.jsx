@@ -131,18 +131,22 @@ const SignUp = ({ setOpen }) => {
                 ) : null}
               </div>
             </div>
-            <label className="text-sm mt-3 text-gray-2">Date Of Birth</label>
-            <input
-              className={`w-full mt-1 py-3 px-4 border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-red-1`}
-              type="date"
-              placeholder="D.O.B."
-              {...getFieldProps("dateOfBirth")}
-            />
-            {errors.dateOfBirth ? (
-              <div className="w-full text-xs text-red-400">
-                {errors.dateOfBirth}
+            <div className="flex mt-3 items-center justify-between">
+              <label className="text-sm text-gray-2 w-1/2">Date Of Birth</label>
+              <div className="w-full">
+                <input
+                  className={` w-full mt-1 py-3 px-4 border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-red-1`}
+                  type="date"
+                  placeholder="D.O.B."
+                  {...getFieldProps("dateOfBirth")}
+                />
+                {errors.dateOfBirth ? (
+                  <div className="w-full text-xs text-red-400">
+                    {errors.dateOfBirth}
+                  </div>
+                ) : null}
               </div>
-            ) : null}
+            </div>
             <input
               className={`w-full mt-3 py-3 px-4 border border-gray-400 focus:outline-none rounded-md focus:ring-1 ring-red-1`}
               type="email"

@@ -107,12 +107,12 @@ const ManageCoupons = () => {
 
   return (
     <div className="w-full flex flew-col md:flex-row bg-client">
-      <div className="w-36 md:w-56 lg:w-60 xl:w-64 bg-red-1">
+      <div className="w-16 md:w-56 lg:w-60 xl:w-64 bg-red-1">
         <SideNav />
       </div>
-      <div className="w-9/12 sm:w-10/12">
+      <div className="w-9/12 sm:w-10/12 mx-auto">
         <ProfileBar />
-        <div className="bg-white px-4 pb-10 shadow-button-shadow-2 max-w-1366 mx-3 2xl:mx-auto mt-36 md:mt-0 mb-10 md:my-16 rounded-2xl">
+        <div className="bg-white px-4 pb-10 shadow-button-shadow-2 max-w-1366 mx-3 2xl:mx-auto my-8 rounded-2xl">
           <h1 className="text-3xl text-center mb-8 leading-tight title-font font-bold text-white w-56 sm:w-96 mx-auto bg-red-1 rounded-b-xl px-3 pt-4 pb-5">
             COUPONS
           </h1>

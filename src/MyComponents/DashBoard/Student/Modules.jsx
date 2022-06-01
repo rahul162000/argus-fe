@@ -79,7 +79,7 @@ const Modules = () => {
             <>
               <div className="hidden lg:flex flex-row text-base xl:text-lg items-stretch mb-2">
                 <h1 className="text-center w-full lg:w-6/12 px-3 py-3 text-gray-2 font-bold rounded-xl border-2 bg-client mx-1">
-                  Course
+                  Modules
                 </h1>
                 <h1 className="text-center lg:w-2/12 px-3 py-3 text-gray-2 font-bold rounded-xl border-2 bg-client mx-1">
                   Started
