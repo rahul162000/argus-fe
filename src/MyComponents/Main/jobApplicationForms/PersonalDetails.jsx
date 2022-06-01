@@ -19,12 +19,11 @@ const PersonalDetails = ({ setFormNo, formNo, formData, setFormData }) => {
     stateOptions.push({ value: element?.isoCode, label: element?.name });
   });
 
-  useEffect(() => {
-    setCountry({ value: null, label: formData?.country });
-    setState({ value: null, label: formData?.state });
-    console.log(stateOptions);
-  }, [formData?.country, formData?.state]);
+  // useEffect(() => {
+  //   setCountry({ value: null, label: formData?.country });
+  //   setState({ value: null, label: formData?.state });
 
+  // }, [formData?.country, formData?.state]);
   const customStyles = {
     option: (provided, state) => ({
       ...provided,
@@ -198,7 +197,9 @@ const PersonalDetails = ({ setFormNo, formNo, formData, setFormData }) => {
             formData.phone === "" ||
             formData.email === "" ||
             formData.country === "" ||
-            formData.address === ""
+            formData.address === "" ||
+            formData?.country === "" ||
+            formData?.state === ""
               ? setFormNo(4)
               : setFormNo(3);
           }}

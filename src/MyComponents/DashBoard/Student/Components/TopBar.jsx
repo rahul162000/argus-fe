@@ -9,6 +9,7 @@ import {
   getUser,
   lastLoggedIn,
 } from "../../../../context/actions/authActions/getUserAction";
+import { Edit, EditNotifications } from "@mui/icons-material";
 
 export const TopBar = () => {
   const [topbarOptions, setTopbarOptions] = useState(false);
@@ -103,7 +104,11 @@ export const TopBar = () => {
         </div>
       </div>
       <TopBarOptions options={topbarOptions} closeOptions={setCloseOptions} />
-      <Notify notify={notify} closeNotify={setCloseNotify} openNotify={setOpenNotify} />
+      <Notify
+        notify={notify}
+        closeNotify={setCloseNotify}
+        openNotify={setOpenNotify}
+      />
     </div>
   );
 };

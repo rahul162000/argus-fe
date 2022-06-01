@@ -4,6 +4,11 @@ import SelectColumnFilter from "../../../../../helpers/TableFilter";
 import ProfileBar from "../ProfileBar";
 import SideNav from "../SideNav";
 import Table from "../../../../Components/reactTable";
+import { CSVLink } from "react-csv";
+import { toast } from "react-toastify";
+import { isEmpty } from "lodash";
+import { Download, DownloadDone } from "@mui/icons-material";
+import { IconButton } from "@mui/material";
 
 const Applications = () => {
   const [show, setShow] = useState(false);
@@ -102,7 +107,20 @@ const Applications = () => {
   ];
   const columns = useMemo(() => headCells, []);
 
-  console.log(applications);
+  const [classes, setClasses] = useState([]);
+  const token = JSON.parse(localStorage.getItem("jwt"));
+  const getAllClasses = () => {
+    axiosInstance
+      .get("/application/get-all", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => {
+        setClasses(res?.data?.data?.applications);
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="w-full flex flew-col md:flex-row bg-client">
@@ -118,14 +136,41 @@ const Applications = () => {
 
           <div className="py-4 px-6">
             <div className="relative ">
-              <button
-                onClick={() => {
-                  setShow(!show);
-                }}
-                className="right-0 -top-5 absolute w-max px-4 py-2 bg-red-1 text-white font-bold rounded-2xl m-3 hover:text-red-1 hover:bg-white border-2 border-red-1"
-              >
-                Filter
-              </button>
+              <div className="flex justify-end items-center">
+                <button
+                  onClick={() => {
+                    setShow(!show);
+                  }}
+                  className=" w-max px-4 py-2 bg-red-1 text-white font-bold rounded-2xl m-3 hover:text-red-1 hover:bg-white border-2 border-red-1"
+                >
+                  Filter
+                </button>
+
+                <div>
+                  {!isEmpty(classes) ? (
+                    <CSVLink
+                      filename="allApplications"
+                      data={classes}
+                      onClick={() =>
+                        toast.success("File downloaded successfuly")
+                      }
+                      className="w-max px-4 py-2 bg-red-1 text-white font-bold rounded-2xl m-3 hover:text-red-1 hover:bg-white border-2 border-red-1"
+                    >
+                      Download
+                    </CSVLink>
+                  ) : (
+                    <button
+                      onClick={() => {
+                        getAllClasses();
+                      }}
+                      className="w-max px-4 py-2 bg-red-1 text-white font-bold rounded-2xl m-3 hover:text-red-1 hover:bg-white border-2 border-red-1"
+                    >
+                      Export
+                    </button>
+                  )}
+                </div>
+              </div>
+
               <Table
                 data={applications}
                 columns={columns}

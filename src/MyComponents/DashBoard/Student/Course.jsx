@@ -17,9 +17,10 @@ const Course = () => {
   const progress = useSelector((state) => state.progress.progress);
   const courses = useSelector((state) => state.progress.course);
   const loading = useSelector((state) => state.progress.loading);
+  const token = JSON.parse(localStorage.getItem('jwt'));
 
   useEffect(() => {
-    dispatch(getUsersCourse());
+    dispatch(getUsersCourse(token));
   }, [dispatch]);
 
   return (

@@ -57,13 +57,13 @@ const getAllCourses = () => {
   };
 };
 
-const getUsersCourse = () => {
+const getUsersCourse = (customToken) => {
   return (dispatch) => {
     dispatch(courseLoading(true));
     axiosInstance
       .get('/material/getUsersCourses', {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${customToken}`,
         },
       })
       .then((res) => {

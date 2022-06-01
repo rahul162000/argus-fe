@@ -13,6 +13,14 @@ import {
 } from "../../../../context/actions/authActions/getUserAction";
 import API from "../../../../api";
 import { useSelector } from "react-redux";
+import {
+  Edit,
+  EditNotificationsRounded,
+  EditRounded,
+  ModeEditRounded,
+  RoundedCorner,
+} from "@mui/icons-material";
+import axios from "axios";
 
 function TopBarOptions({ options, closeOptions }) {
   const history = useHistory();
@@ -28,7 +36,12 @@ function TopBarOptions({ options, closeOptions }) {
       });
     }
   }, [options]);
-
+  const uploadpProfilePic = () => {};
+  const hiddenFileInput = React.useRef(null);
+  const handleClick = (event) => {
+    hiddenFileInput.current.click();
+  };
+  const handleChange = () => {};
   return (
     <div
       className={`z-50 w-64 sm:w-72 absolute top-20 right-6 xl:right-10 2xl:right-32 font-medium text-gray-3 bg-bg-card shadow-button-shadow-2 rounded-2xl ${
@@ -38,11 +51,41 @@ function TopBarOptions({ options, closeOptions }) {
       }`}
     >
       <div className="bg-gray-3 flex flex-row items-center rounded-t-xl">
-        <img
-          src={`${process.env.REACT_APP_BASE_URL}/user/profilePhoto/${id}`}
-          alt=""
-          className="w-16 h-16 m-4 border-3 rounded-xl bg-gray-50 "
-        />
+        <div className="relative">
+          <img
+            src={`${process.env.REACT_APP_BASE_URL}/user/profilePhoto/${id}`}
+            alt=""
+            className="w-16 h-16 m-4 border-3 rounded-xl bg-gray-50 "
+          />
+
+          <EditRounded
+            style={{
+              left: 24,
+              bottom: 24,
+              position: "absolute",
+              zIndex: 999,
+              width: 19,
+              height: 19,
+              cursor: "pointer",
+              backgroundColor:'red',
+              borderRadius:8,
+              padding:4,
+              color:'white'
+
+            }}
+            onClick={(e) => {
+              handleClick();
+            }}
+          />
+          <input
+            type="file"
+            accept=".csv"
+            style={{ display: "none" }}
+            ref={hiddenFileInput}
+            onChange={(file) => handleChange(file)}
+          />
+        </div>
+
         <div className="text-left text-white">
           <h1 className="font-bold">{user?.name}</h1>
           <h1>{user?.docId}</h1>

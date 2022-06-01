@@ -5,7 +5,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Select from "react-select";
 import axiosInstance from "../../../../../../../helpers/axiosInstance";
 import Alert from "../../../../../../Components/Alert";
-import { Editor, EditorState } from "draft-js";
 
 const AddSlide = ({ button, setButton, course }) => {
   const token = JSON.parse(localStorage.getItem("jwt"));
@@ -388,16 +387,13 @@ const AddSlide = ({ button, setButton, course }) => {
               </div>
             </div>
             <div className="w-full lg:w-11/12">
-              {/* <textarea
+              <textarea
                 type="textarea"
                 placeholder="Slide text"
                 className="bg-client p-5 w-full rounded-xl focus:outline-none ring-2 ring-white focus:ring-gray-2 mt-4 h-60"
                 {...getFieldProps("text")}
-              /> */}
-              <Editor
-                editorState={""}
-                onChange={(value) => setFieldValue("text", value)}
               />
+             
               {errors.text ? (
                 <div className="w-full text-xs text-red-400">{errors.text}</div>
               ) : null}
